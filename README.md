@@ -41,3 +41,43 @@ Looking at the makefile there are three strategies:
    intermediate writings;
  - *step* is the single step advancing mode, useful during writings, fast
    because it does not reconnect references, not launch the word-count strategies.
+
+So
+
+```bash
+make step
+```
+
+is the command to the unreferenced PDF production.
+
+```bash
+make build
+```
+
+is the command to produce a full PDF, the intermediate files remain for the next build steps.
+
+```bash
+make publish
+```
+
+to produce a full PDF and clean the folder from the intermediate files.
+
+## github usages and bash script
+
+Using the `template` mode offered by GitHub you can generate future articles repository
+by this starting point.
+
+The following `gscom` bash script is self-explained. It is the _lazy mode on_,
+with the single command `bash gscom.sh commitname` (where _commitname_ is the name you
+want assign to the commit, so channge it!) you are doing all the three listed `git` commands 
+
+```bash
+#!/usr/bin/env bash
+
+# use it by terminal typing:
+# bash gscom.sh commitname
+
+git status
+git add .
+git commit -am "$1"
+```
