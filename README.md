@@ -69,7 +69,7 @@ by this starting point.
 
 The following `gscom` bash script is self-explained. It is the _lazy mode on_,
 with the single command `bash gscom.sh commitname` (where _commitname_ is the name you
-want assign to the commit, so channge it!) you are doing all the three listed `git` commands 
+want assign to the commit, so channge it!) you are doing all the three listed `git` commands
 
 ```bash
 #!/usr/bin/env bash
