@@ -10,15 +10,20 @@ the main text, Andale Mono for code blocks and
 ## characteristics
 
 Two-columns article with a focus on fonts and typographic issues. It employs
-strategies to count characters and words in the final PDF.  
+strategies to count characters and words in the final PDF.
+
+The abstract is imported by an external file (placed into `includes/abstract.txt`)
+to rapidly have text access without formatting. It is useful to strictly look at
+words count during the writing or for the standalone forwarding for the abstract
+reviews.
 
 ## usage
 
 The main file is named `2020-GS-ARTICLE.tex` it includes a call to `gs2020.tex`
 as an external style. You can create different stylesheets to call at necessity.
 
-As ever you can run LaTeX in multiple ways. I prefer to use a makefile to
-automate some passages. Bibliography printing requires multiple compilations to
+As ever you can run LaTeX in multiple ways. I prefer to run a makefile into terminal
+to automate some passages. Bibliography printing requires multiple compilations to
 connect the references, the same for the strategy adopted to count words and
 characters on the final PDF.
 
