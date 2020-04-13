@@ -11,10 +11,10 @@ CCN = pdftotext 2020-GS-ARTICLE.pdf - | wc -w > includes/words.txt
 publish :
 	$(TEX) $(src) && $(BIB) $(bcf) && $(TEX) $(src) && $(TEX) $(src) && $(WCN) && $(CCN) && $(TEX) $(src) && rm *.aux *.log *.bbl *.blg *.out
 
-create :
+build :
 	$(TEX) $(src) && $(BIB) $(bcf) && $(TEX) $(src) && $(TEX) $(src) && $(WCN) && $(CCN) && $(TEX) $(src)
 
-build :
+step :
 	$(TEX) $(src)
 
 .PHONY: clean
