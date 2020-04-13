@@ -12,7 +12,7 @@ the main text, Andale Mono for code blocks and
 Two-columns article with a focus on fonts and typographic issues. It employs
 strategies to count characters and words in the final PDF.
 
-The abstract is imported by an external file (placed into `includes/abstract.txt`)
+The abstract is an external file (placed into `includes/abstract.txt`) imported
 to rapidly have text access without formatting. It is useful to strictly look at
 words count during the writing or for the standalone forwarding for the abstract
 reviews.
