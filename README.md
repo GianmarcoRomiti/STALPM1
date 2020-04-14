@@ -17,6 +17,26 @@ to rapidly have text access without formatting. It is useful to strictly look at
 words count during the writing or for the standalone forwarding for the abstract
 reviews.
 
+### file structure
+
+```text
+.
+├── 2020-GS-ARTICLE.tex
+├── LICENSE
+├── README.md
+├── gs2020.tex
+├── gscom.sh
+├── img
+│   ├── image1.png
+│   └── image1.jpg
+├── includes
+│   ├── abstract.txt
+│   ├── bibliography.bib
+│   ├── char.txt
+│   └── words.txt
+└── makefile
+```
+
 ## usage
 
 The main file is named `2020-GS-ARTICLE.tex` it includes a call to `gs2020.tex`
