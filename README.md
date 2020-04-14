@@ -87,6 +87,16 @@ make publish
 
 to produce a full PDF and clean the folder from the intermediate files.
 
+### counter strategy
+
+As LaTeX common production is a PDF, the count of characters and words is
+processed by pdftotext on the PDF generating two separate files containing
+respectively words counts and character counts. It is necessary then a multiple
+generation strategy to obtain full PDF with cross-references, bibliography
+(BibTeX assumes three compilation processes) and counters. Both counters are
+printed at the footer of each page after the first page, alongside the page
+number and the building date.
+
 ## github usages and bash script
 
 Using the `template` mode offered by GitHub you can generate future articles repository
