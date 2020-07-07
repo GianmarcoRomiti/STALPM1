@@ -1,11 +1,28 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 %!TEX root = 2020-GS-ARTICLE.tex
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
-%	CUSTOM PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
+%-------------------------------- PACKAGES AND OTHER DOCUMENT CONFIGURATIONS ---
+\documentclass[
+	a4paper,
+	twocolumn
+]{article}
+\usepackage[
+	top=20mm,
+	bottom=25mm,
+	textwidth=17.2cm,
+	columnsep=0.8cm
+]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[\mylanguages]{babel}
+\usepackage{graphicx}
+\usepackage{dblfloatfix}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\epstopdfsetup{update}
+\usepackage[usenames]{color}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{hyperref} % For hyperlinks in the PDF
 \usepackage{Alegreya}
 \linespread{1.05}
 \usepackage{
@@ -13,7 +30,6 @@
 	xltxtra,
 	xunicode
 	}
-
 \usepackage{
 	xfrac,
 	unicode-math
@@ -29,12 +45,7 @@
 	]{Libertinus Math}
 
 \usepackage{microtype}
-\usepackage[
-	top=20mm,
-	bottom=25mm,
-	textwidth=17.2cm,
-	columnsep=0.8cm
-	]{geometry}
+
 \usepackage[
 	hang,
 	small,
@@ -58,11 +69,7 @@
 \renewcommand\thesubsection{\Roman{subsection}} % roman numerals for subsections
 \titleformat{\section}[block]{\large\centering}{\thesection.}{1em}{} % Change the look of the section titles
 \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
-%	TITLE SECTION
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
+%------------------------------------------------------------- TITLE SECTION ---
 \setlength{\droptitle}{-4\baselineskip} % Move the title up
 \pretitle{\begin{center}\huge\bfseries} % Article title formatting
 \posttitle{\end{center}} % Article title closing formatting
@@ -71,10 +78,11 @@
 \textsc{\authorone}\\%
 \normalsize \institutione \\ %
 \normalsize \emailone %
-\and % duplicate these 4 lines if more
-\textsc{\authortwo} \\%
-\normalsize \institutiontwo \\ %
-\normalsize \emailtwo %
+% activate
+% \and % duplicate these 4 lines if more
+% \textsc{\authortwo} \\%
+% \normalsize \institutiontwo \\ %
+% \normalsize \emailtwo %
 }
 \date{} % Leave empty to omit a date
 
@@ -91,11 +99,7 @@
 %-------------------------------------------------------------------------------
 \usepackage{listings}
 % lstlistings setup
-\definecolor{yobg}{rgb}{0.9,0.9,1}
-\definecolor{yotxt}{rgb}{0.01,0.01,0.52} % a dark blue.
-\definecolor{mylstbg}{rgb}{0.98,0.98,0.98} % a really pale grey.
-\definecolor{mylstcmt}{rgb}{0.01,0.52,0.01} % a dark green.
-\definecolor{mylstdoc}{rgb}{0.80,0.30,0.80} % a medium pink.
+\definecolor{gsbg}{rgb}{0.98,0.98,0.98}
 
 \lstset{%
   aboveskip=10pt,
@@ -106,9 +110,9 @@
   %frame=single,
   breaklines=true,
   numberstyle=\tiny\ttfamily,
-  backgroundcolor=\color{mylstbg},
+  backgroundcolor=\color{gsbg},
   basicstyle=\footnotesize\ttfamily,
-  commentstyle=\slshape\color{mylstcmt}, %\itshape,
+  %commentstyle=\slshape\color{mylstcmt}, %\itshape,
   %frameround=tttt,
   columns=flexible, %fixed,
   showstringspaces=false,
@@ -135,8 +139,8 @@
   emph={component, declare, environment, import, library, process},
   emph={[2]ffunction, fconstant, fvariable},
   emph={[3]button, checkbox, vslider, hslider, nentry, vgroup, hgroup, tgroup, vbargraph, hbargraph, attach},
-  emphstyle=\color{yotxt}, %\underline, %\bfseries,
-  morecomment=[s][\color{mylstdoc}]{<mdoc>}{</mdoc>},
+  %emphstyle=\color{yotxt}, %\underline, %\bfseries,
+  %morecomment=[s][\color{mylstdoc}]{<mdoc>}{</mdoc>},
   rulecolor=\color{black}
 }
 
@@ -229,4 +233,11 @@
 		\noindent{\textbf{#1}}
 }{
 	\end{mdframed}
+}
+
+%-------------------------------------------------------------------- ABSTRACT -
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent\input{includes/abstract.txt}
+\end{abstract}
 }

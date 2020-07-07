@@ -1,65 +1,28 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 %!TEX root = 2020-GS-ARTICLE.tex
+%----------------------------------------------------------------- LANGUAGES ---
 \newcommand{\mylanguages}{italian,english} % in reverse order
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
-%	TITLE
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
+%---------------------------------------------------------- TITLE & SUBTITLE ---
 \newcommand{\mytitle}{General Relativity}
-\newcommand{\mysubtitle}{For a more accessible and less technical introduction to this topic, \\ see Introduction to General Relativity}
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
-%	AUTHORS
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
+\newcommand{\mysubtitle}{For a more accessible and less technical introduction
+                         to this topic, \\ see Introduction to General Relativity}
+%----------------------------------------------------------------- AUTHOR(s) ---
 \newcommand{\authorone}{Orgo Wikipedio}
 \newcommand{\institutione}{Conservatorio S. Cecilia di Roma}
 \newcommand{\emailone}{orgo @ wikipedio.com}
 %-------------------------------------------------------------------------------
-\newcommand{\authortwo}{Wikio Orgopedio}
-\newcommand{\institutiontwo}{Conservatorio S. Cecilia di Roma}
-\newcommand{\emailtwo}{wikio @ orgopedio.com} % duplicate these 3 lines if more
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
-\documentclass[
-	a4paper,
-	twocolumn
-	]{article}
-%--------------------------------------------------------------- GENERAL SETUP -
-\usepackage[T1]{fontenc}
-\usepackage[\mylanguages]{babel}
-\usepackage{
-  graphicx,
-  dblfloatfix
-}
-\usepackage{graphicx}
-\usepackage{epstopdf}
-\epstopdfsetup{update}
-\usepackage[usenames]{color}
-\usepackage{amssymb}
-\usepackage{hyperref} % For hyperlinks in the PDF
-%---------------------------------------------------------------- STYLE GS2020 -
+% \newcommand{\authortwo}{Wikio Orgopedio}
+% \newcommand{\institutiontwo}{Conservatorio S. Cecilia di Roma}
+% \newcommand{\emailtwo}{wikio @ orgopedio.com} % duplicate these 3 lines if more
+%-------------------------------------------------------------- STYLE GS2020 ---
 \input{gs2020.tex}
-%-------------------------------------------------------------------- ABSTRACT -
-\renewcommand{\maketitlehookd}{%
-\begin{abstract}
-\noindent\input{includes/abstract.txt}
-\end{abstract}
-}
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
+%------------------------------------------------------------ BEGIN DOCUMENT ---
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------- ABSTRACT -
+% The abstract is an external txt file inside the includes folder
 %-------------------------------------------------------------------------------
 \section*{UNNUMBERED SECTION}
 Some predictions of general relativity differ significantly from those of
@@ -76,19 +39,22 @@ the laws of quantum physics to produce a complete and self-consistent theory of
 quantum gravity.
 %-------------------------------------------------------------------------------
 \subsection*{UNNUMBERED SUB-SECTION}
-Einstein's theory has important astrophysical implications. For example, it
+
+\begin{warn}[Einstein's theory]
+ has important astrophysical implications. For example, it
 implies the existence of black holes regions of space in which space and time
 are distorted in such a way that nothing, not even light, can escape as an
-end state for massive stars. There is ample evidence that the intense radiation
+end state for massive stars.
+\end{warn}
+
+There is ample evidence that the intense radiation
 emitted by certain kinds of astronomical objects is due to black holes. For
 example, microquasars and active galactic nuclei result from the presence of
 stellar black holes and supermassive black holes, respectively. The bending of
 light by gravity can lead to the phenomenon of gravitational lensing, in which
 multiple images of the same distant astronomical object are visible in the sky.
 General relativity also predicts the existence of gravitational waves, which
-have since been observed directly by the physics collaboration LIGO. In addition,
-general relativity is the basis of current cosmological models of a consistently
-expanding universe.
+have since been observed directly by the physics collaboration LIGO.
 %-------------------------------------------------------------------------------
 \subsubsection*{UNNUMBERED SUB-SUB-SECTION}
 Some predictions of general relativity differ significantly from those of
@@ -225,10 +191,9 @@ with{
 };
 \end{lstlisting}
 
-Examples
-of such differences include gravitational time dilation, gravitational lensing,
-the gravitational redshift of light, and the gravitational time delay. The
-predictions of general relativity in relation to classical physics have been
+Examples of such differences include gravitational time dilation, gravitational
+lensing, the gravitational redshift of light, and the gravitational time delay.
+The predictions of general relativity in relation to classical physics have been
 confirmed in all observations and experiments to date. Although general
 relativity is not the only relativistic theory of gravity, it is the simplest
 theory that is consistent with experimental data.
